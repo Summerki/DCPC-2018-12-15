@@ -302,10 +302,13 @@ namespace DirectConnectionPredictControl
             {
                 if (header == dataGrid.Columns[i].Header.ToString())
                 {
+                    
                     return i;
                 }
             }
+            
             return -1;
+            
         }
         #endregion
 
