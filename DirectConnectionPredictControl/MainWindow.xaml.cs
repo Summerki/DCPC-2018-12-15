@@ -110,6 +110,7 @@ namespace DirectConnectionPredictControl
                 storyBoard.Begin();
             }
             Init();
+            Utils.getAbsoluteHtmlPath(@"./Charts/test.html");
             //Test();
         }
 
@@ -231,8 +232,8 @@ namespace DirectConnectionPredictControl
         /// </summary>
         private void ClearMsg()
         {
-            oriData = new byte[60][];
-            for (uint i = 0; i < 60; i++)
+            oriData = new byte[66][];
+            for (uint i = 0; i < 66; i++)
             {
                 oriData[i] = new byte[9];
                 for (uint j = 0; j < 8; j++)
@@ -241,31 +242,31 @@ namespace DirectConnectionPredictControl
                 }
                 oriData[i][8] = (byte)' ';
             }
-            for (uint i = 0x10; i <= 0x17; i++)
+            for (uint i = 0x10; i <= 0x18; i++)
             {
                 idList.Add(i);
             }
-            for (uint i = 0x20; i <= 0x27; i++)
+            for (uint i = 0x20; i <= 0x28; i++)
             {
                 idList.Add(i);
             }
             idList.Add(0x31);
-            for (uint i = 0x34; i <= 0x37; i++)
+            for (uint i = 0x34; i <= 0x38; i++)
             {
                 idList.Add(i);
             }
             idList.Add(0x41);
-            for (uint i = 0x44; i <= 0x47; i++)
+            for (uint i = 0x44; i <= 0x48; i++)
             {
                 idList.Add(i);
             }
             idList.Add(0x51);
-            for (uint i = 0x54; i <= 0x57; i++)
+            for (uint i = 0x54; i <= 0x58; i++)
             {
                 idList.Add(i);
             }
             idList.Add(0x61);
-            for (uint i = 0x64; i <= 0x67; i++)
+            for (uint i = 0x64; i <= 0x68; i++)
             {
                 idList.Add(i);
             }
@@ -511,6 +512,10 @@ namespace DirectConnectionPredictControl
             {
                 FormateRealTime(recvData, canIdHigh, canIdLow, FormatType.REAL_TIME, point);
                 int location = getIndex(canID);
+                if(location < 0)
+                {
+                    return;
+                }
                 for (int i = 0; i < 8; i++)
                 {
                     oriData[location][i] = recvData[i];
@@ -731,6 +736,9 @@ namespace DirectConnectionPredictControl
                             container_1.BSRLowA11 = (recvData[7] & 0x02) == 0x02 ? true : false;
                             container_1.ICANFault1 = (recvData[7] & 0x04) == 0x04 ? true : false;
                             container_1.ICANFault2 = (recvData[7] & 0x08) == 0x08 ? true : false;
+
+                            container_1.WSPContinueKeepPressureTimeOutFault_1 = (recvData[7] & 0x40) == 0x40 ? true : false;
+                            container_1.WSPContinueKeepPressureTimeOutFault_2 = (recvData[7] & 0x80) == 0x80 ? true : false;
                             break;
                         #endregion
 
@@ -746,12 +754,13 @@ namespace DirectConnectionPredictControl
                             container_1.OCANFault2 = (recvData[6] & 0x20) == 0x20 ? true : false;
                             container_1.SpeedSenorFault_1 = (recvData[7] & 0x01) == 0x01 ? true : false;
                             container_1.SpeedSenorFault_2 = (recvData[7] & 0x02) == 0x02 ? true : false;
-                            container_1.WSPFault_1 = (recvData[7] & 0x04) == 0x04 ? true : false;
-                            container_1.WSPFault_2 = (recvData[7] & 0x08) == 0x08 ? true : false;
+                            container_1.WSPContinueExaustAirTimeOutFault_1 = (recvData[7] & 0x04) == 0x04 ? true : false;
+                            container_1.WSPContinueExaustAirTimeOutFault_2 = (recvData[7] & 0x08) == 0x08 ? true : false;
                             container_1.CodeConnectorFault = (recvData[7] & 0x10) == 0x10 ? true : false;
                             container_1.AirSpringLimit = (recvData[7] & 0x20) == 0x20 ? true : false;
                             container_1.BrakeNotRealease = (recvData[7] & 0x40) == 0x40 ? true : false;
                             container_1.BCPLowA11 = (recvData[7] & 0x80) == 0x80 ? true : false;
+
                             break;
                         #endregion
 
@@ -783,7 +792,15 @@ namespace DirectConnectionPredictControl
                             container_1.AbStatuesA1 = (recvData[7] & 0x40) == 0x40 ? true : false;
                             container_1.AirSigValid = (recvData[7] & 0x80) == 0x80 ? true : false;
                             break;
-                            #endregion
+                        #endregion
+                        case 8:
+                            container_1.SwitchInputChannel1_8 = recvData[0];
+                            container_1.DigitalOutputChannel9_16 = recvData[1];
+                            container_1.DigitalOutputChannel1_8 = recvData[2];
+                            container_1.OutputOverFlowProtectChannel9_16 = recvData[3];
+                            container_1.OutputOverFlowProtectChannel1_8 = recvData[4];
+                            break;
+
                     }
                     #endregion
                     break;
@@ -876,6 +893,9 @@ namespace DirectConnectionPredictControl
                             container_2.BSSRSuperLow = (recvData[7] & 0x02) == 0x02 ? true : false;
                             container_2.ICANFault1 = (recvData[7] & 0x04) == 0x04 ? true : false;
                             container_2.ICANFault2 = (recvData[7] & 0x08) == 0x08 ? true : false;
+
+                            container_2.WSPContinueKeepPressureTimeOutFault_1 = (recvData[7] & 0x40) == 0x40 ? true : false;
+                            container_2.WSPContinueKeepPressureTimeOutFault_2 = (recvData[7] & 0x80) == 0x80 ? true : false;
                             break;
                         #endregion
 
@@ -893,8 +913,8 @@ namespace DirectConnectionPredictControl
 
                             container_2.SpeedSenorFault_1 = (recvData[7] & 0x01) == 0x01 ? true : false;
                             container_2.SpeedSenorFault_2 = (recvData[7] & 0x02) == 0x02 ? true : false;
-                            container_2.WSPFault_1 = (recvData[7] & 0x04) == 0x04 ? true : false;
-                            container_2.WSPFault_2 = (recvData[7] & 0x08) == 0x08 ? true : false;
+                            container_2.WSPContinueExaustAirTimeOutFault_1 = (recvData[7] & 0x04) == 0x04 ? true : false;
+                            container_2.WSPContinueExaustAirTimeOutFault_2 = (recvData[7] & 0x08) == 0x08 ? true : false;
                             container_2.CodeConnectorFault = (recvData[7] & 0x10) == 0x10 ? true : false;
                             container_2.AirSpringLimit = (recvData[7] & 0x20) == 0x20 ? true : false;
                             container_2.BrakeNotRealease = (recvData[7] & 0x40) == 0x40 ? true : false;
@@ -929,7 +949,14 @@ namespace DirectConnectionPredictControl
 
 
                             break;
-                            #endregion
+                        #endregion
+                        case 8:
+                            container_2.SwitchInputChannel1_8 = recvData[0];
+                            container_2.DigitalOutputChannel9_16 = recvData[1];
+                            container_2.DigitalOutputChannel1_8 = recvData[2];
+                            container_2.OutputOverFlowProtectChannel9_16 = recvData[3];
+                            container_2.OutputOverFlowProtectChannel1_8 = recvData[4];
+                            break;
                     }
                     #endregion
                     break;
@@ -1023,6 +1050,9 @@ namespace DirectConnectionPredictControl
                             container_3.BSSRSuperLow = (recvData[7] & 0x02) == 0x02 ? true : false;
                             container_3.ICANFault1 = (recvData[7] & 0x04) == 0x04 ? true : false;
                             container_3.ICANFault2 = (recvData[7] & 0x08) == 0x08 ? true : false;
+
+                            container_3.WSPContinueKeepPressureTimeOutFault_1 = (recvData[7] & 0x40) == 0x40 ? true : false;
+                            container_3.WSPContinueKeepPressureTimeOutFault_2 = (recvData[7] & 0x80) == 0x80 ? true : false;
                             break;
                         #endregion
 
@@ -1040,8 +1070,8 @@ namespace DirectConnectionPredictControl
 
                             container_3.SpeedSenorFault_1 = (recvData[7] & 0x01) == 0x01 ? true : false;
                             container_3.SpeedSenorFault_2 = (recvData[7] & 0x02) == 0x02 ? true : false;
-                            container_3.WSPFault_1 = (recvData[7] & 0x04) == 0x04 ? true : false;
-                            container_3.WSPFault_2 = (recvData[7] & 0x08) == 0x08 ? true : false;
+                            container_3.WSPContinueExaustAirTimeOutFault_1 = (recvData[7] & 0x04) == 0x04 ? true : false;
+                            container_3.WSPContinueExaustAirTimeOutFault_2 = (recvData[7] & 0x08) == 0x08 ? true : false;
                             container_3.CodeConnectorFault = (recvData[7] & 0x10) == 0x10 ? true : false;
                             container_3.AirSpringLimit = (recvData[7] & 0x20) == 0x20 ? true : false;
                             container_3.BrakeNotRealease = (recvData[7] & 0x40) == 0x40 ? true : false;
@@ -1076,7 +1106,14 @@ namespace DirectConnectionPredictControl
 
 
                             break;
-                            #endregion
+                        #endregion
+                        case 8:
+                            container_3.SwitchInputChannel1_8 = recvData[0];
+                            container_3.DigitalOutputChannel9_16 = recvData[1];
+                            container_3.DigitalOutputChannel1_8 = recvData[2];
+                            container_3.OutputOverFlowProtectChannel9_16 = recvData[3];
+                            container_3.OutputOverFlowProtectChannel1_8 = recvData[4];
+                            break;
                     }
                     #endregion
                     break;
@@ -1170,6 +1207,9 @@ namespace DirectConnectionPredictControl
                             container_4.BSSRSuperLow = (recvData[7] & 0x02) == 0x02 ? true : false;
                             container_4.ICANFault1 = (recvData[7] & 0x04) == 0x04 ? true : false;
                             container_4.ICANFault2 = (recvData[7] & 0x08) == 0x08 ? true : false;
+
+                            container_4.WSPContinueKeepPressureTimeOutFault_1 = (recvData[7] & 0x40) == 0x40 ? true : false;
+                            container_4.WSPContinueKeepPressureTimeOutFault_2 = (recvData[7] & 0x80) == 0x80 ? true : false;
                             break;
                         #endregion
 
@@ -1187,8 +1227,8 @@ namespace DirectConnectionPredictControl
 
                             container_4.SpeedSenorFault_1 = (recvData[7] & 0x01) == 0x01 ? true : false;
                             container_4.SpeedSenorFault_2 = (recvData[7] & 0x02) == 0x02 ? true : false;
-                            container_4.WSPFault_1 = (recvData[7] & 0x04) == 0x04 ? true : false;
-                            container_4.WSPFault_2 = (recvData[7] & 0x08) == 0x08 ? true : false;
+                            container_4.WSPContinueExaustAirTimeOutFault_1 = (recvData[7] & 0x04) == 0x04 ? true : false;
+                            container_4.WSPContinueExaustAirTimeOutFault_2 = (recvData[7] & 0x08) == 0x08 ? true : false;
                             container_4.CodeConnectorFault = (recvData[7] & 0x10) == 0x10 ? true : false;
                             container_4.AirSpringLimit = (recvData[7] & 0x20) == 0x20 ? true : false;
                             container_4.BrakeNotRealease = (recvData[7] & 0x40) == 0x40 ? true : false;
@@ -1223,7 +1263,14 @@ namespace DirectConnectionPredictControl
 
 
                             break;
-                            #endregion
+                        #endregion
+                        case 8:
+                            container_4.SwitchInputChannel1_8 = recvData[0];
+                            container_4.DigitalOutputChannel9_16 = recvData[1];
+                            container_4.DigitalOutputChannel1_8 = recvData[2];
+                            container_4.OutputOverFlowProtectChannel9_16 = recvData[3];
+                            container_4.OutputOverFlowProtectChannel1_8 = recvData[4];
+                            break;
                     }
                     #endregion
                     break;
@@ -1317,6 +1364,9 @@ namespace DirectConnectionPredictControl
                             container_5.BSSRSuperLow = (recvData[7] & 0x02) == 0x02 ? true : false;
                             container_5.ICANFault1 = (recvData[7] & 0x04) == 0x04 ? true : false;
                             container_5.ICANFault2 = (recvData[7] & 0x08) == 0x08 ? true : false;
+
+                            container_5.WSPContinueKeepPressureTimeOutFault_1 = (recvData[7] & 0x40) == 0x40 ? true : false;
+                            container_5.WSPContinueKeepPressureTimeOutFault_2 = (recvData[7] & 0x80) == 0x80 ? true : false;
                             break;
                         #endregion
 
@@ -1334,8 +1384,8 @@ namespace DirectConnectionPredictControl
 
                             container_5.SpeedSenorFault_1 = (recvData[7] & 0x01) == 0x01 ? true : false;
                             container_5.SpeedSenorFault_2 = (recvData[7] & 0x02) == 0x02 ? true : false;
-                            container_5.WSPFault_1 = (recvData[7] & 0x04) == 0x04 ? true : false;
-                            container_5.WSPFault_2 = (recvData[7] & 0x08) == 0x08 ? true : false;
+                            container_5.WSPContinueExaustAirTimeOutFault_1 = (recvData[7] & 0x04) == 0x04 ? true : false;
+                            container_5.WSPContinueExaustAirTimeOutFault_2 = (recvData[7] & 0x08) == 0x08 ? true : false;
                             container_5.CodeConnectorFault = (recvData[7] & 0x10) == 0x10 ? true : false;
                             container_5.AirSpringLimit = (recvData[7] & 0x20) == 0x20 ? true : false;
                             container_5.BrakeNotRealease = (recvData[7] & 0x40) == 0x40 ? true : false;
@@ -1370,7 +1420,14 @@ namespace DirectConnectionPredictControl
 
 
                             break;
-                            #endregion
+                        #endregion
+                        case 8:
+                            container_5.SwitchInputChannel1_8 = recvData[0];
+                            container_5.DigitalOutputChannel9_16 = recvData[1];
+                            container_5.DigitalOutputChannel1_8 = recvData[2];
+                            container_5.OutputOverFlowProtectChannel9_16 = recvData[3];
+                            container_5.OutputOverFlowProtectChannel1_8 = recvData[4];
+                            break;
                     }
                     #endregion
                     break;
@@ -1565,6 +1622,9 @@ namespace DirectConnectionPredictControl
                             container_6.BSRLowA11 = (recvData[7] & 0x02) == 0x02 ? true : false;
                             container_6.ICANFault1 = (recvData[7] & 0x04) == 0x04 ? true : false;
                             container_6.ICANFault2 = (recvData[7] & 0x08) == 0x08 ? true : false;
+
+                            container_6.WSPContinueKeepPressureTimeOutFault_1 = (recvData[7] & 0x40) == 0x40 ? true : false;
+                            container_6.WSPContinueKeepPressureTimeOutFault_2 = (recvData[7] & 0x80) == 0x80 ? true : false;
                             break;
                         #endregion
 
@@ -1580,8 +1640,8 @@ namespace DirectConnectionPredictControl
                             container_6.OCANFault2 = (recvData[6] & 0x20) == 0x20 ? true : false;
                             container_6.SpeedSenorFault_1 = (recvData[7] & 0x01) == 0x01 ? true : false;
                             container_6.SpeedSenorFault_2 = (recvData[7] & 0x02) == 0x02 ? true : false;
-                            container_6.WSPFault_1 = (recvData[7] & 0x04) == 0x04 ? true : false;
-                            container_6.WSPFault_2 = (recvData[7] & 0x08) == 0x08 ? true : false;
+                            container_6.WSPContinueExaustAirTimeOutFault_1 = (recvData[7] & 0x04) == 0x04 ? true : false;
+                            container_6.WSPContinueExaustAirTimeOutFault_2 = (recvData[7] & 0x08) == 0x08 ? true : false;
                             container_6.CodeConnectorFault = (recvData[7] & 0x10) == 0x10 ? true : false;
                             container_6.AirSpringLimit = (recvData[7] & 0x20) == 0x20 ? true : false;
                             container_6.BrakeNotRealease = (recvData[7] & 0x40) == 0x40 ? true : false;
@@ -1617,7 +1677,14 @@ namespace DirectConnectionPredictControl
                             container_6.AbStatuesA1 = (recvData[7] & 0x40) == 0x40 ? true : false;
                             container_6.AirSigValid = (recvData[7] & 0x80) == 0x80 ? true : false;
                             break;
-                            #endregion
+                        #endregion
+                        case 8:
+                            container_6.SwitchInputChannel1_8 = recvData[0];
+                            container_6.DigitalOutputChannel9_16 = recvData[1];
+                            container_6.DigitalOutputChannel1_8 = recvData[2];
+                            container_6.OutputOverFlowProtectChannel9_16 = recvData[3];
+                            container_6.OutputOverFlowProtectChannel1_8 = recvData[4];
+                            break;
                     }
                     #endregion
                     break;
@@ -1876,30 +1943,40 @@ namespace DirectConnectionPredictControl
                             container_1.CPUAddr = recvData[5];
                             container_1.SoftwareVersionCPU = recvData[7];
                             container_1.SoftwareVersionEP = recvData[6];
+
+                            Utils.speedSensorErrorMain(ref container_1, recvData);
                             break;
                         case 4:
                             container_3.WheelSize = recvData[0] * 256 + recvData[1];
                             container_3.CPUAddr = recvData[5];
                             container_3.SoftwareVersionCPU = recvData[7];
                             container_3.SoftwareVersionEP = recvData[6];
+
+                            Utils.speedSensorErrorSliver(ref container_3, recvData);
                             break;
                         case 5:
                             container_4.WheelSize = recvData[0] * 256 + recvData[1];
                             container_4.CPUAddr = recvData[5];
                             container_4.SoftwareVersionCPU = recvData[7];
                             container_4.SoftwareVersionEP = recvData[6];
+
+                            Utils.speedSensorErrorSliver(ref container_4, recvData);
                             break;
                         case 6:
                             container_5.WheelSize = recvData[0] * 256 + recvData[1];
                             container_5.CPUAddr = recvData[5];
                             container_5.SoftwareVersionCPU = recvData[7];
                             container_5.SoftwareVersionEP = recvData[6];
+
+                            Utils.speedSensorErrorSliver(ref container_5, recvData);
                             break;
                         case 2:
                             container_6.WheelSize = recvData[0] * 256 + recvData[1];
                             container_6.CPUAddr = recvData[5];
                             container_6.SoftwareVersionCPU = recvData[7];
                             container_6.SoftwareVersionEP = recvData[6];
+
+                            Utils.speedSensorErrorMain(ref container_6, recvData);
                             break;
                         case 3:
                             container_2.WheelSize = recvData[0] * 256 + recvData[1];
@@ -1907,6 +1984,8 @@ namespace DirectConnectionPredictControl
                             container_2.CPUAddr = recvData[5];
                             container_2.SoftwareVersionCPU = recvData[7];
                             container_2.SoftwareVersionEP = recvData[6];
+
+                            Utils.speedSensorErrorSliver(ref container_2, recvData);
                             break;
                         default:
                             break;

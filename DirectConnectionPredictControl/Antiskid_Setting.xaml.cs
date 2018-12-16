@@ -199,10 +199,10 @@ namespace DirectConnectionPredictControl
                 SaveValue();
                 for (int i = 0; i < 10; i++)
                 {
-                    canHelper.Send_0x91(Byte_0x91);
-                    canHelper.Send_0x92(Byte_0x92);
-                    canHelper.Send_0x93(Byte_0x93);
-                    canHelper.Send_0x94(Byte_0x94);
+                    canHelper.SendByID(Byte_0x91, 0x91);
+                    canHelper.SendByID(Byte_0x92, 0x92);
+                    canHelper.SendByID(Byte_0x93, 0x93);
+                    canHelper.SendByID(Byte_0x94, 0x94);
                 }
                 bSend = true;
             }

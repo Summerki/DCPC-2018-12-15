@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Summerki\Desktop\DCPC_Project\DirectConnectionPredictControl\obj\x86\Debug\
+C:\Users\summerki\Desktop\2018-12-16\DCPC-2018-12-15\DirectConnectionPredictControl\obj\x86\Debug\
 DirectConnectionPredictControl
 none
 false
 DEBUG;TRACE
-C:\Users\Summerki\Desktop\DCPC_Project\DirectConnectionPredictControl\App.xaml
+C:\Users\summerki\Desktop\2018-12-16\DCPC-2018-12-15\DirectConnectionPredictControl\App.xaml
 28-791407384
 28-943854209
 53-556085686
-262139785748
+26-442921660
 Antiskid_Display.xaml;Antiskid_Setting.xaml;CanDownload.xaml;ChartWindow.xaml;ComboBoxControl.xaml;ComboxGeneric.xaml;CommenResource.xaml;ConfigHistoryDataGrid.xaml;DashboardControls.xaml;DetailWindow.xaml;FileSystemView.xaml;FTPLogin.xaml;FTPWindow.xaml;Generic.xaml;HistoryChartDetail.xaml;HistoryDetail.xaml;MainWindow.xaml;NodeWindow.xaml;OverviewWindow.xaml;OverviewWindowHis.xaml;ParameterSetWindow.xaml;RealTimeOtherWindow.xaml;RealTimePressureChartWindow.xaml;RealTimeSpeedChartWindow.xaml;ReNameWindow.xaml;SlaveDetailWindow.xaml;SpeedboardRes.xaml;Window1.xaml;
 
 False

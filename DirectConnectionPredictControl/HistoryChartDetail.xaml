@@ -8,6 +8,7 @@
         mc:Ignorable="d"
         Title="HistoryChartDetail" Height="450" Width="800">
     <Grid>
-        <cef:ChromiumWebBrowser Name="bro" Address="file:///C:\Users\Summerki\Desktop\DCPC_Project\DirectConnectionPredictControl\Charts\test.html"></cef:ChromiumWebBrowser>
+        <cef:ChromiumWebBrowser Name="bro" ></cef:ChromiumWebBrowser>
+        <!--Address="file:///C:\Users\Summerki\Desktop\DCPC_Project\DirectConnectionPredictControl\Charts\test.html"-->
     </Grid>
 </Window>

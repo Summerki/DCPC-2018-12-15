@@ -42,29 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="CefSharp" version="69.0.0.0" publicKeyToken="40C4B6FC221F4138" language="neutral" processorArchitecture="x86" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="CefSharp.Core" version="69.0.0.0" publicKeyToken="40C4B6FC221F4138" language="neutral" processorArchitecture="x86" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="CefSharp.Wpf" version="69.0.0.0" publicKeyToken="40C4B6FC221F4138" language="neutral" processorArchitecture="x86" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DirectConnectionPredictControl.exe" size="2035168">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DirectConnectionPredictControl.exe" size="2055136">
       <assemblyIdentity name="DirectConnectionPredictControl" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>0tJ74qWXjA9B15n1H5p8J368U0f7p8TX7r7K76tN4pk=</dsig:DigestValue>
+        <dsig:DigestValue>rb0peAyXpjO7Lj2vtf4VDOw2uLBN8YMm60YPvYFBSII=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -125,31 +110,31 @@
       <dsig:DigestValue>jTsnXxwHzfKsYSdvjzyis85mpCp+Wq5KNRpoI/AaL9M=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Charts\echarts.js" size="2870015">
+  <file name="Charts\echarts.js" size="2963432">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>XrOyYBjAp6JY30VWwkc8C+lEoLOBN1mfse6hf6diYJE=</dsig:DigestValue>
+      <dsig:DigestValue>cdSqpguHbDLrkJPpTAGwby391gyBnAa362VN7RckRUU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Charts\echarts.min.js" size="744702">
+  <file name="Charts\echarts.min.js" size="744724">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>FvuggLW/e7EKcT+vgpZq4W/akiuNX1Ab3573cg7Sfgw=</dsig:DigestValue>
+      <dsig:DigestValue>9FqDu2rO6dLoNuS9r2oM3TEQtFCxwJZlVU6qgHqtd78=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Charts\test.html" size="59195">
+  <file name="Charts\test.html" size="60285">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>MlKqQV6jDwD3FI2z0XIpVuA13GO5w1y2ro2f13dSKvo=</dsig:DigestValue>
+      <dsig:DigestValue>LpvRXJQsYxLG7IUkBcrxJ0vFg3hkDzHIvWciH5q+1js=</dsig:DigestValue>
     </hash>
   </file>
   <file name="ControlCAN.dll" size="53248">

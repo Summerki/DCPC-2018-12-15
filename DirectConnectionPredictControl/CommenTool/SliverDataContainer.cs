@@ -6,11 +6,21 @@ using System.Threading.Tasks;
 
 namespace DirectConnectionPredictControl.CommenTool
 {
+    
     /// <summary>
     /// 从设备的消息类，X=2~6，表示EBCU2~6
     /// </summary>
     public class SliverDataContainer
     {
+        //速度传感器的故障分类
+        public static string NORMAL = "正常";
+        public static string OPEN_CIRCUIT = "断路";
+        public static string SHORT_CIRCUIT = "短路";
+        public static string MUTATION = "突变";
+        public static string OVER_DIFF_VALUE = "差值过大";
+
+
+
         /// <summary>
         /// 生命信号
         /// </summary>
@@ -647,5 +657,59 @@ namespace DirectConnectionPredictControl.CommenTool
         /// 轮径存储值
         /// </summary>
         public double WheelSize { get; set; }
+
+        /// <summary>
+        /// 轴1WSP连续保压超时故障
+        /// </summary>
+        public bool WSPContinueKeepPressureTimeOutFault_1 { get; set; }
+
+        /// <summary>
+        /// 轴2WSP连续保压超时故障
+        /// </summary>
+        public bool WSPContinueKeepPressureTimeOutFault_2 { get; set; }
+
+        /// <summary>
+        /// 轴1WSP连续排风超时故障
+        /// </summary>
+        public bool WSPContinueExaustAirTimeOutFault_1 { get; set; }
+
+        /// <summary>
+        /// 轴2WSP连续排风超时故障
+        /// </summary>
+        public bool WSPContinueExaustAirTimeOutFault_2 { get; set; }
+
+        /// <summary>
+        /// 1轴传感器故障
+        /// </summary>
+        public string SpeedSensorError_1 = NORMAL;
+        /// <summary>
+        /// 2轴传感器故障
+        /// </summary>
+        public string SpeedSensorError_2 = NORMAL;
+
+        /// <summary>
+        /// 开关量输入1-8
+        /// </summary>
+        public byte SwitchInputChannel1_8 { get; set; }
+
+        /// <summary>
+        /// 数字量输出9-16
+        /// </summary>
+        public byte DigitalOutputChannel9_16 { get; set; }
+
+        /// <summary>
+        /// 数字量输出1-8
+        /// </summary>
+        public byte DigitalOutputChannel1_8 { get; set; }
+
+        /// <summary>
+        /// 输出过流保护9-16
+        /// </summary>
+        public byte OutputOverFlowProtectChannel9_16 { get; set; }
+
+        /// <summary>
+        /// 输出过流保护1-8
+        /// </summary>
+        public byte OutputOverFlowProtectChannel1_8 { get; set; }
     }
 }

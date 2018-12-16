@@ -171,6 +171,14 @@
                             <RowDefinition Height="Auto"></RowDefinition>
                             <RowDefinition Height="Auto"></RowDefinition>
                             <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
                         </Grid.RowDefinitions>
 
                         <!--column headers-->
@@ -220,6 +228,11 @@
                         <Label Grid.Column="0" Grid.Row="35">主风管压力</Label>
                         <Label Grid.Column="0" Grid.Row="36">存储轮径</Label>
                         <Label Grid.Column="0" Grid.Row="37">MVB轮径</Label>
+                        <Label Grid.Column="0" Grid.Row="38">开关量输入1-8路</Label>
+                        <Label Grid.Column="0" Grid.Row="39">数字量输出9-16路</Label>
+                        <Label Grid.Column="0" Grid.Row="40">数字量输出1-8路</Label>
+                        <Label Grid.Column="0" Grid.Row="41">输出过流保护9-16路</Label>
+                        <Label Grid.Column="0" Grid.Row="42">输出过流保护1-8路</Label>
                         
                         <!--GS_1 Data Vector-->
                         <Label Name="row_1_column_1" Grid.Column="1" Grid.Row="1">0.0</Label>
@@ -256,9 +269,14 @@
                         <Label Name="row_32_column_1" Grid.Column="1" Grid.Row="32">0.0</Label>
                         <Label Name="row_33_column_1" Grid.Column="1" Grid.Row="33">0.0</Label>
                         <Label Name="row_34_column_1" Grid.Column="1" Grid.Row="34">0.0</Label>
-                        <Label Name="row_35_column_1" Grid.Column="1" Grid.Row="35">0.0</Label>
+                        <!--<Label Name="row_35_column_1" Grid.Column="1" Grid.Row="35">0.0</Label>-->
                         <Label Name="row_36_column_1" Grid.Column="1" Grid.Row="36">0/0</Label>
                         <Label Name="row_37_column_1" Grid.Column="1" Grid.Row="37">0/0</Label>
+                        <Label Name="row_38_column_1" Grid.Column="1" Grid.Row="38">0</Label>
+                        <Label Name="row_39_column_1" Grid.Column="1" Grid.Row="39">0</Label>
+                        <Label Name="row_40_column_1" Grid.Column="1" Grid.Row="40">0</Label>
+                        <Label Name="row_41_column_1" Grid.Column="1" Grid.Row="41">0</Label>
+                        <Label Name="row_42_column_1" Grid.Column="1" Grid.Row="42">0</Label>
 
                         <!--GS_2 Data Vector-->
                         <Label Name="row_1_column_2" Grid.Column="2" Grid.Row="1">0.0</Label>
@@ -297,6 +315,11 @@
                         <Label Name="row_34_column_2" Grid.Column="2" Grid.Row="34">0.0</Label>
                         <Label Name="row_36_column_2" Grid.Column="2" Grid.Row="36">0/0</Label>
                         <Label Name="row_37_column_2" Grid.Column="2" Grid.Row="37">0/0</Label>
+                        <Label Name="row_38_column_2" Grid.Column="2" Grid.Row="38">0</Label>
+                        <Label Name="row_39_column_2" Grid.Column="2" Grid.Row="39">0</Label>
+                        <Label Name="row_40_column_2" Grid.Column="2" Grid.Row="40">0</Label>
+                        <Label Name="row_41_column_2" Grid.Column="2" Grid.Row="41">0</Label>
+                        <Label Name="row_42_column_2" Grid.Column="2" Grid.Row="42">0</Label>
 
                         <!--GS_3 Data Vector-->
                         <Label Name="row_1_column_3" Grid.Column="3" Grid.Row="1">0.0</Label>
@@ -335,6 +358,11 @@
                         <Label Name="row_34_column_3" Grid.Column="3" Grid.Row="34">0.0</Label>
                         <Label Name="row_36_column_3" Grid.Column="3" Grid.Row="36">0/0</Label>
                         <Label Name="row_37_column_3" Grid.Column="3" Grid.Row="37">0/0</Label>
+                        <Label Name="row_38_column_3" Grid.Column="3" Grid.Row="38">0</Label>
+                        <Label Name="row_39_column_3" Grid.Column="3" Grid.Row="39">0</Label>
+                        <Label Name="row_40_column_3" Grid.Column="3" Grid.Row="40">0</Label>
+                        <Label Name="row_41_column_3" Grid.Column="3" Grid.Row="41">0</Label>
+                        <Label Name="row_42_column_3" Grid.Column="3" Grid.Row="42">0</Label>
 
                         <!--GS_4 Data Vector-->
                         <Label Name="row_1_column_4" Grid.Column="4" Grid.Row="1">0.0</Label>
@@ -371,8 +399,14 @@
                         <Label Name="row_32_column_4" Grid.Column="4" Grid.Row="32">0.0</Label>
                         <Label Name="row_33_column_4" Grid.Column="4" Grid.Row="33">0.0</Label>
                         <Label Name="row_34_column_4" Grid.Column="4" Grid.Row="34">0.0</Label>
+                        <Label Name="row_35_column_4" Grid.Column="4" Grid.Row="35">0.0</Label>
                         <Label Name="row_36_column_4" Grid.Column="4" Grid.Row="36">0/0</Label>
                         <Label Name="row_37_column_4" Grid.Column="4" Grid.Row="37">0/0</Label>
+                        <Label Name="row_38_column_4" Grid.Column="4" Grid.Row="38">0</Label>
+                        <Label Name="row_39_column_4" Grid.Column="4" Grid.Row="39">0</Label>
+                        <Label Name="row_40_column_4" Grid.Column="4" Grid.Row="40">0</Label>
+                        <Label Name="row_41_column_4" Grid.Column="4" Grid.Row="41">0</Label>
+                        <Label Name="row_42_column_4" Grid.Column="4" Grid.Row="42">0</Label>
                         
                         <!--GS_5 Data Vector-->
                         <Label Name="row_1_column_5" Grid.Column="5" Grid.Row="1">0.0</Label>
@@ -411,7 +445,11 @@
                         <Label Name="row_34_column_5" Grid.Column="5" Grid.Row="34">0.0</Label>
                         <Label Name="row_36_column_5" Grid.Column="5" Grid.Row="36">0/0</Label>
                         <Label Name="row_37_column_5" Grid.Column="5" Grid.Row="37">0/0</Label>
-
+                        <Label Name="row_38_column_5" Grid.Column="5" Grid.Row="38">0</Label>
+                        <Label Name="row_39_column_5" Grid.Column="5" Grid.Row="39">0</Label>
+                        <Label Name="row_40_column_5" Grid.Column="5" Grid.Row="40">0</Label>
+                        <Label Name="row_41_column_5" Grid.Column="5" Grid.Row="41">0</Label>
+                        <Label Name="row_42_column_5" Grid.Column="5" Grid.Row="42">0</Label>
                         <!--GS_6 Data Vector-->
                         <Label Name="row_1_column_6" Grid.Column="6" Grid.Row="1">0.0</Label>
                         <Label Name="row_2_column_6" Grid.Column="6" Grid.Row="2">0.0</Label>
@@ -449,6 +487,11 @@
                         <Label Name="row_34_column_6" Grid.Column="6" Grid.Row="34">0.0</Label>
                         <Label Name="row_36_column_6" Grid.Column="6" Grid.Row="36">0/0</Label>
                         <Label Name="row_37_column_6" Grid.Column="6" Grid.Row="37">0/0</Label>
+                        <Label Name="row_38_column_6" Grid.Column="6" Grid.Row="38">0</Label>
+                        <Label Name="row_39_column_6" Grid.Column="6" Grid.Row="39">0</Label>
+                        <Label Name="row_40_column_6" Grid.Column="6" Grid.Row="40">0</Label>
+                        <Label Name="row_41_column_6" Grid.Column="6" Grid.Row="41">0</Label>
+                        <Label Name="row_42_column_6" Grid.Column="6" Grid.Row="42">0</Label>
                     </Grid>
                 </ScrollViewer>
                 
@@ -1284,6 +1327,8 @@
                         <Label Grid.Column="0" Grid.Row="16">A车BCP太低</Label>
                         <Label Grid.Column="0" Grid.Row="17">B车BCP太低</Label>
                         <Label Grid.Column="0" Grid.Row="18">C车BCP太低</Label>
+                        <Label Grid.Column="0" Grid.Row="19">轴1WSP连续保压超时故障</Label>
+                        <Label Grid.Column="0" Grid.Row="20">轴2WSP连续保压超时故障</Label>
 
                         <Label Grid.Column="7" Grid.Row="1">速度传感器1故障</Label>
                         <Label Grid.Column="7" Grid.Row="2">速度传感器2故障</Label>
@@ -1304,6 +1349,8 @@
                         <Label Grid.Column="7" Grid.Row="17">ICAN2通讯故障</Label>
                         <Label Grid.Column="7" Grid.Row="18">OCAN1通讯故障</Label>
                         <Label Grid.Column="7" Grid.Row="19">OCAN2通讯故障</Label>
+                        <Label Grid.Column="7" Grid.Row="20">轴1WSP连续排风超时故障</Label>
+                        <Label Grid.Column="7" Grid.Row="21">轴2WSP连续排风超时故障</Label>
                         <!--SG_1 Data Vector-->
                         <Ellipse Grid.Column="1" Grid.Row="1" Name="row_1_column_1_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="1" Grid.Row="2" Name="row_2_column_1_FA" Style="{StaticResource ellipse}"></Ellipse>
@@ -1323,6 +1370,8 @@
                         <Ellipse Grid.Column="1" Grid.Row="16" Name="row_16_column_1_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="1" Grid.Row="17" Name="row_17_column_1_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="1" Grid.Row="18" Name="row_18_column_1_FA" Style="{StaticResource ellipse}"></Ellipse>
+                        <Ellipse Grid.Column="1" Grid.Row="19" Name="row_19_column_1_FA" Style="{StaticResource ellipse}"></Ellipse>
+                        <Ellipse Grid.Column="1" Grid.Row="20" Name="row_20_column_1_FA" Style="{StaticResource ellipse}"></Ellipse>
 
                         <Ellipse Grid.Column="8" Grid.Row="1" Name="row_1_column_8_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="8" Grid.Row="2" Name="row_2_column_8_FA" Style="{StaticResource ellipse}"></Ellipse>
@@ -1343,6 +1392,8 @@
                         <Ellipse Grid.Column="8" Grid.Row="17" Name="row_17_column_8_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="8" Grid.Row="18" Name="row_18_column_8_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="8" Grid.Row="19" Name="row_19_column_8_FA" Style="{StaticResource ellipse}"></Ellipse>
+                        <Ellipse Grid.Column="8" Grid.Row="20" Name="row_20_column_8_FA" Style="{StaticResource ellipse}"></Ellipse>
+                        <Ellipse Grid.Column="8" Grid.Row="21" Name="row_21_column_8_FA" Style="{StaticResource ellipse}"></Ellipse>
 
                         <!--SG_2 Data Vector-->
                         <Ellipse Grid.Column="2" Grid.Row="1" Name="row_1_column_2_FA" Style="{StaticResource ellipse}"></Ellipse>
@@ -1363,6 +1414,8 @@
                         <Ellipse Grid.Column="2" Grid.Row="16" Name="row_16_column_2_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="2" Grid.Row="17" Name="row_17_column_2_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="2" Grid.Row="18" Name="row_18_column_2_FA" Style="{StaticResource ellipse}"></Ellipse>
+                        <Ellipse Grid.Column="2" Grid.Row="19" Name="row_19_column_2_FA" Style="{StaticResource ellipse}"></Ellipse>
+                        <Ellipse Grid.Column="2" Grid.Row="20" Name="row_20_column_2_FA" Style="{StaticResource ellipse}"></Ellipse>
 
                         <Ellipse Grid.Column="9" Grid.Row="1" Name="row_1_column_9_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="9" Grid.Row="2" Name="row_2_column_9_FA" Style="{StaticResource ellipse}"></Ellipse>
@@ -1384,6 +1437,8 @@
                         <Ellipse Grid.Column="9" Grid.Row="17" Name="row_17_column_9_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="9" Grid.Row="18" Name="row_18_column_9_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="9" Grid.Row="19" Name="row_19_column_9_FA" Style="{StaticResource ellipse}"></Ellipse>
+                        <Ellipse Grid.Column="9" Grid.Row="20" Name="row_20_column_9_FA" Style="{StaticResource ellipse}"></Ellipse>
+                        <Ellipse Grid.Column="9" Grid.Row="21" Name="row_21_column_9_FA" Style="{StaticResource ellipse}"></Ellipse>
 
                         <!--SG_3 Data Vector-->
                         <Ellipse Grid.Column="3" Grid.Row="1" Name="row_1_column_3_FA" Style="{StaticResource ellipse}"></Ellipse>
@@ -1404,6 +1459,8 @@
                         <Ellipse Grid.Column="3" Grid.Row="16" Name="row_16_column_3_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="3" Grid.Row="17" Name="row_17_column_3_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="3" Grid.Row="18" Name="row_18_column_3_FA" Style="{StaticResource ellipse}"></Ellipse>
+                        <Ellipse Grid.Column="3" Grid.Row="19" Name="row_19_column_3_FA" Style="{StaticResource ellipse}"></Ellipse>
+                        <Ellipse Grid.Column="3" Grid.Row="20" Name="row_20_column_3_FA" Style="{StaticResource ellipse}"></Ellipse>
 
                         <Ellipse Grid.Column="10" Grid.Row="1" Name="row_1_column_10_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="10" Grid.Row="2" Name="row_2_column_10_FA" Style="{StaticResource ellipse}"></Ellipse>
@@ -1425,7 +1482,8 @@
                         <Ellipse Grid.Column="10" Grid.Row="17" Name="row_17_column_10_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="10" Grid.Row="18" Name="row_18_column_10_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="10" Grid.Row="19" Name="row_19_column_10_FA" Style="{StaticResource ellipse}"></Ellipse>
-
+                        <Ellipse Grid.Column="10" Grid.Row="20" Name="row_20_column_10_FA" Style="{StaticResource ellipse}"></Ellipse>
+                        <Ellipse Grid.Column="10" Grid.Row="21" Name="row_21_column_10_FA" Style="{StaticResource ellipse}"></Ellipse>
 
                         <!--SG_4 Data Vector-->
                         <Ellipse Grid.Column="4" Grid.Row="1" Name="row_1_column_4_FA" Style="{StaticResource ellipse}"></Ellipse>
@@ -1446,6 +1504,8 @@
                         <Ellipse Grid.Column="4" Grid.Row="16" Name="row_16_column_4_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="4" Grid.Row="17" Name="row_17_column_4_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="4" Grid.Row="18" Name="row_18_column_4_FA" Style="{StaticResource ellipse}"></Ellipse>
+                        <Ellipse Grid.Column="4" Grid.Row="19" Name="row_19_column_4_FA" Style="{StaticResource ellipse}"></Ellipse>
+                        <Ellipse Grid.Column="4" Grid.Row="20" Name="row_20_column_4_FA" Style="{StaticResource ellipse}"></Ellipse>
 
                         <Ellipse Grid.Column="11" Grid.Row="1" Name="row_1_column_11_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="11" Grid.Row="2" Name="row_2_column_11_FA" Style="{StaticResource ellipse}"></Ellipse>
@@ -1467,6 +1527,8 @@
                         <Ellipse Grid.Column="11" Grid.Row="17" Name="row_17_column_11_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="11" Grid.Row="18" Name="row_18_column_11_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="11" Grid.Row="19" Name="row_19_column_11_FA" Style="{StaticResource ellipse}"></Ellipse>
+                        <Ellipse Grid.Column="11" Grid.Row="20" Name="row_20_column_11_FA" Style="{StaticResource ellipse}"></Ellipse>
+                        <Ellipse Grid.Column="11" Grid.Row="21" Name="row_21_column_11_FA" Style="{StaticResource ellipse}"></Ellipse>
 
                         <!--SG_5 Data Vector-->
                         <Ellipse Grid.Column="5" Grid.Row="1" Name="row_1_column_5_FA" Style="{StaticResource ellipse}"></Ellipse>
@@ -1487,6 +1549,8 @@
                         <Ellipse Grid.Column="5" Grid.Row="16" Name="row_16_column_5_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="5" Grid.Row="17" Name="row_17_column_5_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="5" Grid.Row="18" Name="row_18_column_5_FA" Style="{StaticResource ellipse}"></Ellipse>
+                        <Ellipse Grid.Column="5" Grid.Row="19" Name="row_19_column_5_FA" Style="{StaticResource ellipse}"></Ellipse>
+                        <Ellipse Grid.Column="5" Grid.Row="20" Name="row_20_column_5_FA" Style="{StaticResource ellipse}"></Ellipse>
 
                         <Ellipse Grid.Column="12" Grid.Row="1" Name="row_1_column_12_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="12" Grid.Row="2" Name="row_2_column_12_FA" Style="{StaticResource ellipse}"></Ellipse>
@@ -1508,6 +1572,8 @@
                         <Ellipse Grid.Column="12" Grid.Row="17" Name="row_17_column_12_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="12" Grid.Row="18" Name="row_18_column_12_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="12" Grid.Row="19" Name="row_19_column_12_FA" Style="{StaticResource ellipse}"></Ellipse>
+                        <Ellipse Grid.Column="12" Grid.Row="20" Name="row_20_column_12_FA" Style="{StaticResource ellipse}"></Ellipse>
+                        <Ellipse Grid.Column="12" Grid.Row="21" Name="row_21_column_12_FA" Style="{StaticResource ellipse}"></Ellipse>
 
                         <!--SG_6 Data Vector-->
                         <Ellipse Grid.Column="6" Grid.Row="1" Name="row_1_column_6_FA" Style="{StaticResource ellipse}"></Ellipse>
@@ -1528,6 +1594,8 @@
                         <Ellipse Grid.Column="6" Grid.Row="16" Name="row_16_column_6_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="6" Grid.Row="17" Name="row_17_column_6_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="6" Grid.Row="18" Name="row_18_column_6_FA" Style="{StaticResource ellipse}"></Ellipse>
+                        <Ellipse Grid.Column="6" Grid.Row="19" Name="row_19_column_6_FA" Style="{StaticResource ellipse}"></Ellipse>
+                        <Ellipse Grid.Column="6" Grid.Row="20" Name="row_20_column_6_FA" Style="{StaticResource ellipse}"></Ellipse>
 
                         <Ellipse Grid.Column="13" Grid.Row="1" Name="row_1_column_13_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="13" Grid.Row="2" Name="row_2_column_13_FA" Style="{StaticResource ellipse}"></Ellipse>
@@ -1549,6 +1617,8 @@
                         <Ellipse Grid.Column="13" Grid.Row="17" Name="row_17_column_13_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="13" Grid.Row="18" Name="row_18_column_13_FA" Style="{StaticResource ellipse}"></Ellipse>
                         <Ellipse Grid.Column="13" Grid.Row="19" Name="row_19_column_13_FA" Style="{StaticResource ellipse}"></Ellipse>
+                        <Ellipse Grid.Column="13" Grid.Row="20" Name="row_20_column_13_FA" Style="{StaticResource ellipse}"></Ellipse>
+                        <Ellipse Grid.Column="13" Grid.Row="21" Name="row_21_column_13_FA" Style="{StaticResource ellipse}"></Ellipse>
                     </Grid>
                 </ScrollViewer>
                 <StackPanel Grid.Row="10">
@@ -1629,6 +1699,9 @@
                         <Label Grid.Row="2" Grid.Column="0">DCU1电网电压</Label>
                         <Label Grid.Row="3" Grid.Column="0">DCU2电网电压</Label>
                         <Label Grid.Row="4" Grid.Column="0">轴1减速度</Label>
+                        <Label Grid.Row="5" Grid.Column="0">1轴速度传感器故障明细</Label>
+                        <Label Grid.Row="6" Grid.Column="0">2轴速度传感器故障明细</Label>
+                        
                         <Label Grid.Row="4" Grid.Column="7">轴2减速度</Label>
                         <Label Grid.Row="2" Grid.Column="7">DCU3电网电压</Label>
                         <Label Grid.Row="3" Grid.Column="7">DCU4电网电压</Label>
@@ -1639,6 +1712,8 @@
                         <Label Grid.Row="1" Grid.Column="4" Name="row_1_column_4_sli"></Label>
                         <Label Grid.Row="1" Grid.Column="5" Name="row_1_column_5_sli"></Label>
                         <Label Grid.Row="1" Grid.Column="6" Name="row_1_column_6_sli"></Label>
+                        
+                        
 
                         <Label Grid.Row="1" Grid.Column="8" Name="row_1_column_8_sli"></Label>
                         <Label Grid.Row="1" Grid.Column="9" Name="row_1_column_9_sli"></Label>
@@ -1688,6 +1763,20 @@
                         <Label Grid.Row="4" Grid.Column="11" Name="row_4_column_11_sli"></Label>
                         <Label Grid.Row="4" Grid.Column="12" Name="row_4_column_12_sli"></Label>
                         <Label Grid.Row="4" Grid.Column="13" Name="row_4_column_13_sli"></Label>
+
+                        <Label Grid.Row="5" Grid.Column="1" Name="row_5_column_1_sli"></Label>
+                        <Label Grid.Row="5" Grid.Column="2" Name="row_5_column_2_sli"></Label>
+                        <Label Grid.Row="5" Grid.Column="3" Name="row_5_column_3_sli"></Label>
+                        <Label Grid.Row="5" Grid.Column="4" Name="row_5_column_4_sli"></Label>
+                        <Label Grid.Row="5" Grid.Column="5" Name="row_5_column_5_sli"></Label>
+                        <Label Grid.Row="5" Grid.Column="6" Name="row_5_column_6_sli"></Label>
+
+                        <Label Grid.Row="6" Grid.Column="1" Name="row_6_column_1_sli"></Label>
+                        <Label Grid.Row="6" Grid.Column="2" Name="row_6_column_2_sli"></Label>
+                        <Label Grid.Row="6" Grid.Column="3" Name="row_6_column_3_sli"></Label>
+                        <Label Grid.Row="6" Grid.Column="4" Name="row_6_column_4_sli"></Label>
+                        <Label Grid.Row="6" Grid.Column="5" Name="row_6_column_5_sli"></Label>
+                        <Label Grid.Row="6" Grid.Column="6" Name="row_6_column_6_sli"></Label>
                     </Grid>
                     
                 </ScrollViewer>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DirectConnectionPredictControl.CommenTool;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,10 @@ namespace DirectConnectionPredictControl
         {
             InitializeComponent();
             WindowState = WindowState.Maximized;
+            //Utils.htmlPath = Utils.htmlPath.Replace("//", "/");
+            string cefHtmlPath = "file:///" + Utils.htmlPath;
+            
+            bro.Address = cefHtmlPath;
         }
     }
 }

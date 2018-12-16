@@ -109,6 +109,20 @@ namespace DirectConnectionPredictControl
             row_3_column_8_sli.Content = container_1.DcuVolta[3] + " V";
             row_3_column_1_sli.Content = container_1.DcuVolta[1] + " V";
             row_2_column_8_sli.Content = container_1.DcuVolta[2] + " V";
+
+            row_5_column_1_sli.Content = container_1.SpeedSensorError_1;
+            row_5_column_2_sli.Content = container_2.SpeedSensorError_1;
+            row_5_column_3_sli.Content = container_3.SpeedSensorError_1;
+            row_5_column_4_sli.Content = container_4.SpeedSensorError_1;
+            row_5_column_5_sli.Content = container_5.SpeedSensorError_1;
+            row_5_column_6_sli.Content = container_6.SpeedSensorError_1;
+
+            row_6_column_1_sli.Content = container_1.SpeedSensorError_2;
+            row_6_column_2_sli.Content = container_2.SpeedSensorError_2;
+            row_6_column_3_sli.Content = container_3.SpeedSensorError_2;
+            row_6_column_4_sli.Content = container_4.SpeedSensorError_2;
+            row_6_column_5_sli.Content = container_5.SpeedSensorError_2;
+            row_6_column_6_sli.Content = container_6.SpeedSensorError_2;
         }
 
         /// <summary>
@@ -138,7 +152,7 @@ namespace DirectConnectionPredictControl
             row_5_column_4.Content = string.Format(Utils.formatN1, container_4.SpeedShaft1);
             row_5_column_5.Content = string.Format(Utils.formatN1, container_5.SpeedShaft1);
             row_5_column_6.Content = string.Format(Utils.formatN1, container_6.SpeedA1Shaft1);
-            
+
             row_6_column_1.Content = string.Format(Utils.formatN1, container_1.SpeedA1Shaft2);
             row_6_column_2.Content = string.Format(Utils.formatN1, container_2.SpeedShaft2);
             row_6_column_3.Content = string.Format(Utils.formatN1, container_3.SpeedShaft2);
@@ -300,6 +314,8 @@ namespace DirectConnectionPredictControl
             row_33_column_6.Content = container_6.SoftwareVersionCPU;
             row_34_column_6.Content = container_6.SoftwareVersionEP;
 
+            row_35_column_4.Content = container_4.ParkPressure;
+
             //row_34_column_4.Content = container_4.ParkPressure;
 
             // TC、MP、ME轮径
@@ -317,6 +333,41 @@ namespace DirectConnectionPredictControl
             row_37_column_5.Content = container_1.M1 + " / " + container_6.M2;
             row_37_column_6.Content = container_1.M1 + " / " + container_6.M2;
 
+            //0xX8 data
+            row_38_column_1.Content = "0x" + container_1.SwitchInputChannel1_8.ToString("X");
+            row_38_column_2.Content = "0x" + container_2.SwitchInputChannel1_8.ToString("X");
+            row_38_column_3.Content = "0x" + container_3.SwitchInputChannel1_8.ToString("X");
+            row_38_column_4.Content = "0x" + container_4.SwitchInputChannel1_8.ToString("X");
+            row_38_column_5.Content = "0x" + container_5.SwitchInputChannel1_8.ToString("X");
+            row_38_column_6.Content = "0x" + container_6.SwitchInputChannel1_8.ToString("X");
+
+            row_39_column_1.Content = "0x" + container_1.DigitalOutputChannel9_16.ToString("X");
+            row_39_column_2.Content = "0x" + container_2.DigitalOutputChannel9_16.ToString("X");
+            row_39_column_3.Content = "0x" + container_3.DigitalOutputChannel9_16.ToString("X");
+            row_39_column_4.Content = "0x" + container_4.DigitalOutputChannel9_16.ToString("X");
+            row_39_column_5.Content = "0x" + container_5.DigitalOutputChannel9_16.ToString("X");
+            row_39_column_6.Content = "0x" + container_6.DigitalOutputChannel9_16.ToString("X");
+
+            row_40_column_1.Content = "0x" + container_1.DigitalOutputChannel1_8.ToString("X");
+            row_40_column_2.Content = "0x" + container_2.DigitalOutputChannel1_8.ToString("X");
+            row_40_column_3.Content = "0x" + container_3.DigitalOutputChannel1_8.ToString("X");
+            row_40_column_4.Content = "0x" + container_4.DigitalOutputChannel1_8.ToString("X");
+            row_40_column_5.Content = "0x" + container_5.DigitalOutputChannel1_8.ToString("X");
+            row_40_column_6.Content = "0x" + container_6.DigitalOutputChannel1_8.ToString("X");
+
+            row_41_column_1.Content = "0x" + container_1.OutputOverFlowProtectChannel9_16.ToString("X");
+            row_41_column_2.Content = "0x" + container_2.OutputOverFlowProtectChannel9_16.ToString("X");
+            row_41_column_3.Content = "0x" + container_3.OutputOverFlowProtectChannel9_16.ToString("X");
+            row_41_column_4.Content = "0x" + container_4.OutputOverFlowProtectChannel9_16.ToString("X");
+            row_41_column_5.Content = "0x" + container_5.OutputOverFlowProtectChannel9_16.ToString("X");
+            row_41_column_6.Content = "0x" + container_6.OutputOverFlowProtectChannel9_16.ToString("X");
+
+            row_42_column_1.Content = "0x" + container_1.OutputOverFlowProtectChannel1_8.ToString("X");
+            row_42_column_2.Content = "0x" + container_2.OutputOverFlowProtectChannel1_8.ToString("X");
+            row_42_column_3.Content = "0x" + container_3.OutputOverFlowProtectChannel1_8.ToString("X");
+            row_42_column_4.Content = "0x" + container_4.OutputOverFlowProtectChannel1_8.ToString("X");
+            row_42_column_5.Content = "0x" + container_5.OutputOverFlowProtectChannel1_8.ToString("X");
+            row_42_column_6.Content = "0x" + container_6.OutputOverFlowProtectChannel1_8.ToString("X");
         }
 
         private void UpdateDI()
@@ -845,6 +896,41 @@ namespace DirectConnectionPredictControl
             row_19_column_12_FA.Fill = GetBrush(container_5.OCANFault2);
             row_19_column_13_FA.Fill = GetBrush(container_6.OCANFault2);
 
+            //WSP1轴保压故障
+            row_19_column_1_FA.Fill = GetBrush(container_1.WSPContinueKeepPressureTimeOutFault_1);
+            row_19_column_2_FA.Fill = GetBrush(container_2.WSPContinueKeepPressureTimeOutFault_1);
+            row_19_column_3_FA.Fill = GetBrush(container_3.WSPContinueKeepPressureTimeOutFault_1);
+            row_19_column_4_FA.Fill = GetBrush(container_4.WSPContinueKeepPressureTimeOutFault_1);
+            row_19_column_5_FA.Fill = GetBrush(container_5.WSPContinueKeepPressureTimeOutFault_1);
+            row_19_column_6_FA.Fill = GetBrush(container_6.WSPContinueKeepPressureTimeOutFault_1);
+            row_19_column_1_FA.Fill = GetBrush(container_1.WSPContinueKeepPressureTimeOutFault_1);
+            row_19_column_1_FA.Fill = GetBrush(container_1.WSPContinueKeepPressureTimeOutFault_1);
+
+            //WSP2轴保压故障
+            row_20_column_1_FA.Fill = GetBrush(container_1.WSPContinueKeepPressureTimeOutFault_2);
+            row_20_column_2_FA.Fill = GetBrush(container_2.WSPContinueKeepPressureTimeOutFault_2);
+            row_20_column_3_FA.Fill = GetBrush(container_3.WSPContinueKeepPressureTimeOutFault_2);
+            row_20_column_4_FA.Fill = GetBrush(container_4.WSPContinueKeepPressureTimeOutFault_2);
+            row_20_column_5_FA.Fill = GetBrush(container_5.WSPContinueKeepPressureTimeOutFault_2);
+            row_20_column_6_FA.Fill = GetBrush(container_6.WSPContinueKeepPressureTimeOutFault_2);
+            row_20_column_1_FA.Fill = GetBrush(container_1.WSPContinueKeepPressureTimeOutFault_2);
+            row_20_column_1_FA.Fill = GetBrush(container_1.WSPContinueKeepPressureTimeOutFault_2);
+
+            //WSP1轴排风故障
+            row_20_column_8_FA.Fill = GetBrush(container_1.WSPContinueExaustAirTimeOutFault_1);
+            row_20_column_9_FA.Fill = GetBrush(container_2.WSPContinueExaustAirTimeOutFault_1);
+            row_20_column_10_FA.Fill = GetBrush(container_3.WSPContinueExaustAirTimeOutFault_1);
+            row_20_column_11_FA.Fill = GetBrush(container_4.WSPContinueExaustAirTimeOutFault_1);
+            row_20_column_12_FA.Fill = GetBrush(container_5.WSPContinueExaustAirTimeOutFault_1);
+            row_20_column_13_FA.Fill = GetBrush(container_6.WSPContinueExaustAirTimeOutFault_1);
+
+            //WSP2轴排风故障
+            row_21_column_8_FA.Fill = GetBrush(container_1.WSPContinueExaustAirTimeOutFault_2);
+            row_21_column_9_FA.Fill = GetBrush(container_2.WSPContinueExaustAirTimeOutFault_2);
+            row_21_column_10_FA.Fill = GetBrush(container_3.WSPContinueExaustAirTimeOutFault_2);
+            row_21_column_11_FA.Fill = GetBrush(container_4.WSPContinueExaustAirTimeOutFault_2);
+            row_21_column_12_FA.Fill = GetBrush(container_5.WSPContinueExaustAirTimeOutFault_2);
+            row_21_column_13_FA.Fill = GetBrush(container_6.WSPContinueExaustAirTimeOutFault_2);
         }
 
         private SolidColorBrush GetBrush(bool b)

@@ -184,12 +184,15 @@ namespace DirectConnectionPredictControl.CommenTool
         }
         #region 何虎，2018-9-24
         /// <summary>
-        /// 发送一个0x91CAN数据包
+        /// 发送一个CAN数据包
         /// </summary>
         /// <param name="data">设备状态</param>
         /// <returns></returns>
-        unsafe public DeviceState Send_0x91(byte[] data)
+        unsafe public DeviceState SendByID(byte[] data, uint id)
         {
+            uint crc = Utils.CRC_GEN(data, 8);
+            id = id << 21;
+            id = id | crc;
             VCI_ClearBuffer(4, 0, CANInd);
             UInt32 con_maxlen = 500;
             IntPtr pt = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(VCI_CAN_OBJ)) * (Int32)con_maxlen);
@@ -198,103 +201,7 @@ namespace DirectConnectionPredictControl.CommenTool
                 SendType = 0,
                 RemoteFlag = 0,
                 ExternFlag = 0, //2018-10-12:将其等于1 意思是改为扩展帧的格式 记录一下
-                ID = 0x91,
-                DataLen = 8
-            };
-            for (int i = 0; i < data.Length; i++)
-            {
-                sendObj.Data[i] = data[i];
-            }
-            if (VCI_Transmit(4, 0, CANInd, ref sendObj, 1) == 0)
-            {
-                return DeviceState.Fail;
-            }
-            else
-            {
-                return DeviceState.Success;
-            }
-        }
-
-        /// <summary>
-        /// 发送一个0x92CAN数据包
-        /// </summary>
-        /// <param name="data">设备状态</param>
-        /// <returns></returns>
-        unsafe public DeviceState Send_0x92(byte[] data)
-        {
-            VCI_ClearBuffer(4, 0, CANInd);
-            UInt32 con_maxlen = 500;
-            IntPtr pt = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(VCI_CAN_OBJ)) * (Int32)con_maxlen);
-            VCI_CAN_OBJ sendObj = new VCI_CAN_OBJ
-            {
-                SendType = 0,
-                RemoteFlag = 0,
-                ExternFlag = 0,
-                ID = 0x92,
-                DataLen = 8
-            };
-            for (int i = 0; i < data.Length; i++)
-            {
-                sendObj.Data[i] = data[i];
-            }
-            if (VCI_Transmit(4, 0, CANInd, ref sendObj, 1) == 0)
-            {
-                return DeviceState.Fail;
-            }
-            else
-            {
-                return DeviceState.Success;
-            }
-        }
-
-        /// <summary>
-        /// 发送一个0x93CAN数据包
-        /// </summary>
-        /// <param name="data">设备状态</param>
-        /// <returns></returns>
-        unsafe public DeviceState Send_0x93(byte[] data)
-        {
-            VCI_ClearBuffer(4, 0, CANInd);
-            UInt32 con_maxlen = 500;
-            IntPtr pt = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(VCI_CAN_OBJ)) * (Int32)con_maxlen);
-            VCI_CAN_OBJ sendObj = new VCI_CAN_OBJ
-            {
-                SendType = 0,
-                RemoteFlag = 0,
-                ExternFlag = 0,
-                ID = 0x93,
-                DataLen = 8
-            };
-            for (int i = 0; i < data.Length; i++)
-            {
-                sendObj.Data[i] = data[i];
-            }
-            if (VCI_Transmit(4, 0, CANInd, ref sendObj, 1) == 0)
-            {
-                return DeviceState.Fail;
-            }
-            else
-            {
-                return DeviceState.Success;
-            }
-        }
-
-        /// <summary>
-        /// 发送一个0x94CAN数据包
-        /// </summary>
-        /// <param name="data">设备状态</param>
-        /// <returns></returns>
-        unsafe public DeviceState Send_0x94(byte[] data)
-        {
-            VCI_ClearBuffer(4, 0, CANInd);
-            UInt32 con_maxlen = 500;
-            IntPtr pt = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(VCI_CAN_OBJ)) * (Int32)con_maxlen);
-            VCI_CAN_OBJ sendObj = new VCI_CAN_OBJ
-            {
-                SendType = 0,
-                RemoteFlag = 0,
-                ExternFlag = 0,
-                ID = 0x94,
+                ID = id,
                 DataLen = 8
             };
             for (int i = 0; i < data.Length; i++)

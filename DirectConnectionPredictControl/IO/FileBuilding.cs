@@ -113,6 +113,7 @@ namespace DirectConnectionPredictControl.IO
             canIDMap.Add(index++, 0x2a00000);   //0x15
             canIDMap.Add(index++, 0x2c00000);   //0x16
             canIDMap.Add(index++, 0x2e00000);   //0x17
+            canIDMap.Add(index++, 0x3000000);   //0x18
 
             canIDMap.Add(index++, 0x4000000);   //0x20
             canIDMap.Add(index++, 0x4200000);   //0x21 =
@@ -122,30 +123,35 @@ namespace DirectConnectionPredictControl.IO
             canIDMap.Add(index++, 0x4a00000);   //0x25
             canIDMap.Add(index++, 0x4c00000);   //0x26
             canIDMap.Add(index++, 0x4e00000);   //0x27
+            canIDMap.Add(index++, 0x5000000);   //0x28
 
             canIDMap.Add(index++, 0x6200000);   //0x31=
             canIDMap.Add(index++, 0x6800000);   //0x34
             canIDMap.Add(index++, 0x6a00000);   //0x35
             canIDMap.Add(index++, 0x6c00000);   //0x36
             canIDMap.Add(index++, 0x6e00000);   //0x37
+            canIDMap.Add(index++, 0x7000000);   //0x38
 
             canIDMap.Add(index++, 0x8200000);   //0x41=
             canIDMap.Add(index++, 0x8800000);   //0x44
             canIDMap.Add(index++, 0x8a00000);   //0x45
             canIDMap.Add(index++, 0x8c00000);   //0x46
             canIDMap.Add(index++, 0x8e00000);   //0x47
+            canIDMap.Add(index++, 0x9000000);   //0x48
 
             canIDMap.Add(index++, 0xa200000);   //0x51=
             canIDMap.Add(index++, 0xa800000);   //0x54
             canIDMap.Add(index++, 0xaa00000);   //0x55
             canIDMap.Add(index++, 0xac00000);   //0x56
             canIDMap.Add(index++, 0xae00000);   //0x57
+            canIDMap.Add(index++, 0xb000000);   //0x58
 
             canIDMap.Add(index++, 0xc200000);   //0x61=
             canIDMap.Add(index++, 0xc800000);   //0x64
             canIDMap.Add(index++, 0xca00000);   //0x65
             canIDMap.Add(index++, 0xcc00000);   //0x66
             canIDMap.Add(index++, 0xce00000);   //0x67
+            canIDMap.Add(index++, 0xd000000);   //0x68
 
             canIDMap.Add(index++, 0xe200000);   //0x71
             canIDMap.Add(index++, 0xe400000);   //0x72
